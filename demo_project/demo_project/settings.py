@@ -26,12 +26,13 @@ SECRET_KEY = 'fs@e+=64-p54ryp53%fep=exl4^u-=p(9r+4wonq5lxr+hlv2k'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+AUTH_USER_MODEL = 'custom_account.UserCredentials'
 
 # Application definition
 
 INSTALLED_APPS = [
     'account.apps.AccountConfig',
+    'custom_account.apps.CustomAccountConfig',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',

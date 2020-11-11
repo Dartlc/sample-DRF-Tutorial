@@ -7,7 +7,7 @@ class RegistrationSerializers(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Registration
-        fields = ['first_name', 'last_name']
+        fields = ['first_name', 'last_name', 'email', 'password']
 
     def validate(self, attrs):
         first_name = attrs.get('first_name', '')
