@@ -4,10 +4,11 @@ from ..models import Registration
 
 class RegistrationSerializers(serializers.HyperlinkedModelSerializer):
     last_name = serializers.CharField(required=False, max_length=255, allow_null=True, allow_blank=True)
+    address = serializers.JSONField(required=False, allow_null=True)
 
     class Meta:
         model = Registration
-        fields = ['first_name', 'last_name', 'email', 'password']
+        fields = ['first_name', 'last_name', 'email', 'password', 'address']
 
     def validate(self, attrs):
         first_name = attrs.get('first_name', '')
