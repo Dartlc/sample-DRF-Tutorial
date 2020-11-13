@@ -8,6 +8,7 @@ class Registration(models.Model):
     last_name = models.CharField(max_length=255, null=True)
     email = models.EmailField(max_length=255, null=False, unique=True)
     address = models.JSONField(null=True)
+    qualification = models.JSONField(null=True)
     password = models.CharField(max_length=255, null=True)
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
