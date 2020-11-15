@@ -35,3 +35,4 @@ class UserTestView(UserTest):
         res = self.client.post(self.register_url, format='json')
         self.assertEqual(res.status_code, 400)
 
+
